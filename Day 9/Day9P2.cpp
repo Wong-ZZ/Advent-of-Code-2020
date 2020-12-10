@@ -23,7 +23,6 @@ int main() {
             store.push_back(current);
             s.insert(current);
         }
-        
 
         while (getline(input, line)) {
             is_valid = false;
