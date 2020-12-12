@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    string line, instruction;
+    string line;
     ifstream input("input.txt");
     unordered_map<int,unordered_map<int,char>> grid, prev;
     char state;

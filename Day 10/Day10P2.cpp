@@ -29,7 +29,7 @@ long calculate(int current, set<int>* s, int max, map<int, long>* m) {
 }
 
 int main() {
-    string line, instruction;
+    string line;
     ifstream input("input.txt");
     set<int> s;
     s.insert(0);
