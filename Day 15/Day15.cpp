@@ -1,14 +1,13 @@
 #include <iostream>
-#include <fstream>
-#include <string>
-#include <unordered_map>
 #include <vector>
 
 using namespace std;
 
+const int NUM_TURNS = 30000000; // change to 2020 for part 1
+int history[NUM_TURNS];
+
 int main() {
     vector<int> input = {9,12,1,4,17,0,18};
-    unordered_map<int,int> history;
     int turn = 0, next, last;
     for (auto& in : input) {
         history[in] = ++turn;
@@ -16,10 +15,10 @@ int main() {
 
     next = 0;
 
-    while (turn < 2020) {
-        cout << next << "\n";
+    while (turn < NUM_TURNS) {
+        if (turn == NUM_TURNS - 1) cout << next << "\n";
         ++turn;
-        if (history.count(next) != 1) {
+        if (history[next] == 0) {
             history[next] = turn;
             next = 0;
             continue;
