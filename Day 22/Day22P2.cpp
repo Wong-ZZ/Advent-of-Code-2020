@@ -5,6 +5,8 @@
 #include <set>
 
 using namespace std;
+int count1 = 0;
+int count2 = 0;
 
 int play_subgame(vector<int> p1, vector<int> p2, set<pair<vector<int>,vector<int>>>* sub_states) {
     if (p1.empty() || p2.empty()) {
@@ -44,7 +46,7 @@ vector<int> play_game(vector<int> p1, vector<int> p2, set<pair<vector<int>,vecto
     }
 
     if ((*states).count({p1,p2}) == 1) {
-        return p2;
+        return p1;
     }
     (*states).insert({p1,p2});
 
